@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Frontend Mentor | Interactive card details form 
+        style 
+            include ../static/style.css
+    body 
+        .contenier 
+            .bg-main 
+                .card-front 
+                    .card-logo 
+                        .logo-1 
+                        .logo-2
+                    .card-deitals 
+                        #img-card-number #{number}
+                        .img-card-name
+                            #img-card-name #{name}
+                            #img-card-expire-date 
+                                span#img-card-exp-mo #{month}
+                                | /
+                                span#img-card-exp-y #{year}
+                .card-back 
+                    #img-card-cvv #{cvv}
+            block content 
+        div.attribution 
+            |   Challenge by <a href="https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw" target="_blank">Frontend Mentor</a>. 
+            |    Coded by <a href="https://www.frontendmentor.io/profile/Rohan-Hait2">Rohan Hait</a>.

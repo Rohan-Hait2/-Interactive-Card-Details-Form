@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Space Grotesk', sans-serif;
+}
+.thank-logo{
+    width: 40px;
+    height: 40px;
+    color:   hsl(278, 94%, 30%) ;
+    border-radius: 20px;
+    margin: 10px;
+}
+.thank-page{
+    padding: 20% 7%;
+    margin-left: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.attribution { 
+    position: fixed;
+    bottom: 0;
+    right: 0;
+   font-size: small;
+   text-align: center;
+
+}
+.attribution a { color: hsl(228, 45%, 44%); }
+.contenier{
+    display: flex;
+}
+.bg-main{
+    width: 40%;
+    background-image: url("../static/images/bg-main-desktop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.card-form{
+    padding: 20% 7%;
+    margin-left: 15%
+}
+.card-front{
+    background-image: url("../static/images/bg-card-front.png");
+    background-size: cover;
+    width: 318px;
+    height: 155px;
+    border-radius: 20px;
+    padding: 20px;
+    margin:  10px;
+    color: white;
+    display: grid;    
+    position: relative;
+    left: 40%;
+    top: 15%;
+}
+.card-logo{
+    grid-row: 1/span 1;
+}
+.card-deitals{
+    display: grid;
+    grid-template-rows: auto auto ;
+    align-items: end;
+    
+}
+#img-card-number{
+    grid-column: 1/span1;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.card-back{
+    background-image: url("../static/images/bg-card-back.png");
+    width: 303px;
+    height: 140px;
+    border-radius: 20px;
+    padding: 32px;
+    margin:  10px;
+    background-size: cover;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    color: rgb(255, 250, 252);
+    
+    position: relative;
+    top: 23%;
+    left: 57%;
+}
+.img-card-name{
+    display: flex;
+    justify-content: space-between;
+}
+.card-logo{
+    display: flex;
+}
+.logo-2{
+    width: 20px;
+    height: 20px;
+    background-image: linear-gradient( hsl(249, 99%, 64%)  hsl(278, 94%, 30%));
+    border-radius: 13px;
+    margin: 4px 10px;
+    border: 1px solid white;
+        
+        
+}
+.logo-1 {
+    width: 30px;
+    height: 30px;
+    background-color: rgb(255,255,255);
+    border-radius: 15px
+}
+label{
+    display: block;
+    padding: 5px 0px;
+}
+input{
+    padding: 3px;
+    width: 250px;
+    border: 1px solid darkviolet;
+    border-radius: 5px;
+    margin : 5px 0px
+}
+.form-last-block input{
+    width: 50px;
+}
+.form-last-block{
+    display: flex;
+    
+}
+.card-cvv{
+    margin-left: 25px;
+}
+button{
+    width: 90%;
+    margin: 5%;
+    height: 40px;
+    border-radius: 15px;
+    background: hsl(278, 68%, 11%);
+    color: white;
+    cursor: pointer; 
+    transition: .5s linear;
+}
+button:hover {
+    background: hsl(278, 94%, 30%);
+    transform: scale(1.1);
+}
+.err, #err-exp-date-mo,#err-exp-date-y{
+    color:  hsl(0, 100%, 66%);
+    font-weight: bold;
+    font-size: 10px;
+}
+@media screen and (max-width:990px)
+{
+    
+    .card-front{
+        width: 260px;
+        height: 126px;
+        
+    }
+    .card-back{
+        width: 255px;
+        height: 120px;
+    }
+    #img-card-number{
+        font-size: 20px;
+    }
+    .form-last-block input{
+    width: 40px;
+    }
+    .card-front{
+        left: 20%;
+    }
+    .card-back{
+        left: 33%;
+    }    
+}
+@media screen and (max-width : 690px) and (min-width: 481px){
+    label,input, div ,span{
+        font-size: 12px;
+    }
+    .err , #err-exp-date-mo,#err-exp-date-y{
+        font-size: 8px;
+    }
+    .bg-main{
+        width: 30%;
+    }
+    *{
+        font-size: 14px;
+    }
+    .card-front{
+        width: 200px;
+        height: 100px;
+       
+    }
+    .card-back{
+        width: 180px;
+        height: 90px;
+    }
+    #img-card-number{
+        font-size: 18px;
+    }
+    .form-last-block input{
+    width: 35px;
+    }
+    .card-front{
+        left: 10%;
+    }
+    .card-back{
+        left: 22%;
+    }        
+}
+
+@media screen and (max-width : 480px) 
+{
+    .contenier{
+    display: grid;
+    }
+    .bg-main{
+    width: 100%;
+    height: 90%; 
+    background-image: url("../static/images/bg-main-mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+    .card-front{
+        left: -20px;
+        top: 65%;
+        width: 67%;
+        height: 75%;
+        margin: 0px auto;
+        z-index: 1;
+        
+    }
+    .card-back{
+        left: 20px;
+        top: -90%;
+        width: 60%;
+        height: 60%;
+        margin: 0px auto;
+    }
+    .card-form , .thank-page{
+        margin: 10px;
+        padding: 100px 0px;
+        font-size: 15px;
+    }
+    input{
+        width: 100%;
+        height: 25px
+    }
+    .form-last-block input{
+        width : 60px
+    }
+}

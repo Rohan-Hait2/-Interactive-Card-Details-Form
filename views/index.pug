@@ -1,0 +1,29 @@
+extends base.pug
+block content
+    .card-form 
+        form(action="/" onsubmit = "return chack()" nonvalidate  method="post" )
+            .card-name 
+                label(for="name") CARDHOLDER NAME 
+                input(type="text" name="name" required  id = "card-hold-name" placeholder = "e.g. Jane Appleseed" ) 
+                .err#err-name
+            .card-number 
+                label(for="number") CARD NUMBER
+                input(type="text", name="number" , id = "card-hold-number", placeholder = "e.g. 1234 5678 9123 0000" )
+                .err#err-number
+            .form-last-block
+                .card-expire 
+                    label(for="card-expire-date")  EXP. DATE(MM/YY)
+
+                    input(type="text" name = "month" ,id = "card-exp-mo" placeholder = "MM" required max = '2')
+                    span(style= "font-size : 20px, padding : 3px") / 
+                    input(type="text" name = "year" ,id = "card-exp-y" placeholder = "YY" required max = '2') 
+                    .err
+                        #err-exp-date-mo
+                        #err-exp-date-y
+                .card-cvv 
+                    label(for="cvv") CVV 
+                    input(type="text" name = "cvv" id = "card-cvv-pin" placeholder = "e.g. 001")
+                    .err#err-cvv-number
+            button(type="submit" class = "submit-btn") Confirm
+        script 
+            include ../static/index.js
